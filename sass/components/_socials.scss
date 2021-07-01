@@ -1,0 +1,43 @@
+.socials {
+  @extend %list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: var(--primary-icon-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    fill: currentColor;
+  }
+
+  &__item + &__item {
+    margin-left: 10px;
+  }
+  &__link--dark {
+    background-color: var(--background-color-footer-icon);
+    color: var(--primary-white-color);
+  }
+}

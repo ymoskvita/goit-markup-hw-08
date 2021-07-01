@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color-main);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font);
+  letter-spacing: 0.03em;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+// .title {
+//   color: var(--title-text-color);
+//   @include font(700, 14px, 1.14);
+//   margin-top: 0;
+//   margin-bottom: 10px;
+// }

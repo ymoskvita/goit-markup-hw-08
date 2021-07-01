@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  margin-right: 93px;
+
+  color: var(--primary-black-color);
+  font-family: var(--logo-font);
+  @include font(700, 26px, 1.19);
+
+  &--accent-color {
+    color: var(--accent-color);
+  }
+}
