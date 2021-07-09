@@ -12,14 +12,39 @@
 
 .footer-list {
   @extend %list;
-
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+  }
 }
 
 .contacts-list {
   @extend %list;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 
   &__link {
     display: inline-block;
@@ -46,22 +71,45 @@
   display: flex;
   flex-direction: column;
   width: 205px;
-  margin-top: 12px;
-  margin-left: 50px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+    // width: 570px;
+    margin-top: 12px;
+    padding-top: 0;
+  }
 
   &__title {
     margin-bottom: 20px;
+    margin-top: 0;
     @include font(700, 14px, 1.14);
     text-transform: uppercase;
+    text-align: center;
 
     color: var(--primary-white-color);
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 }
 
 .subscribe {
   display: flex;
   flex-direction: column;
-  width: 570px;
-  margin-top: 12px;
-  margin-left: 93px;
+  padding-top: 60px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    padding-top: 0;
+    margin-top: 12px;
+    margin-left: 93px;
+    width: 570px;
+  }
 }

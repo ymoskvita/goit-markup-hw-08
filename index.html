@@ -18,41 +18,68 @@
         <div class="container">
         <nav class="main-nav">
             <a href="" class="logo link"><span class="logo--accent-color" >Web</span>Studio</a>
+            <button class="menu-button" type="button" data-menu-button>
+                <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+                    <use class="icon-cross" href="./images/icons.svg#icon-close-menu"></use>
+                    <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
 
-            <ul class="site-nav">
-                <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current link">Студия</a></li>
-                <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
-                <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
-            </ul>
+            <div class="menu-container" id="menu-container" data-menu>
+                <div class="novigation">
+                    <ul class="site-nav">
+                        <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current link">Студия</a></li>
+                        <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
+                        <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="contacts">
+                    <ul class="auth-nav">
+                        <li class="auth-nav__item">
+                            <a href="mailto:info@devstudio.com" class="auth-nav__link link">
+                            <svg class="auth-nav__icon" width="16" height="12">
+                                <use href="./images/icons.svg#icon-envelope" ></use>
+                            </svg>
+                            info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="auth-nav__item">
+                            <a href="tel:+380961111111" class="auth-nav__link link">
+                                <svg class="auth-nav__icon" width="10" height="16" >
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
 
-            <ul class="auth-nav">
-                <li class="auth-nav__item">
-                    <a href="mailto:info@devstudio.com" class="auth-nav__link link">
-                       <svg class="auth-nav__icon" width="16" height="12">
-                           <use href="./images/icons.svg#icon-envelope" ></use>
-                       </svg>
-                       info@devstudio.com
-                    </a>
-                </li>
-                <li class="auth-nav__item">
-                    <a href="tel:+380961111111" class="auth-nav__link link">
-                        <svg class="auth-nav__icon" width="10" height="16" >
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+                    <ul class="media-nav">
+                        <li class="media-nav__item">
+                            <a href="" class="media-nav_link link">Instagram</a>
+                        </li>
+                        <li class="media-nav__item">
+                            <a href="" class="media-nav_link link">Twitter</a>
+                        </li>
+                        <li class="media-nav__item">
+                            <a href="" class="media-nav_link link">Facebook</a>
+                        </li>
+                        <li class="media-nav__item">
+                            <a href="" class="media-nav_link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         </div>
     </header>
+    
     <main>
         <section class="hero overlay">
             <div class="container">
                 <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
                 <button class="hero__button button--accent-color" data-modal-open type="button">Заказать услугу</button>
-        <!-- модальное окно -->
+
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
                         <button class="button-close" data-modal-close>
@@ -97,6 +124,7 @@
 
             </div>
         </section>
+
         <!-- особенности -->
         <section class="section">
             <div class="container">
@@ -145,9 +173,9 @@
         </section>
 
         <!-- чем мы занимаемся -->
-        <section class="section no-padding">
+        <section class="section section--no-padding">
             <div class="container">
-                <h2 class="section__title">Чем мы занимаемся</h2>
+                <h2 class="about-section__title">Чем мы занимаемся</h2>
                 <ul class="about-list">
                     <li class="about-list__item">
                         <img src="./images/box_1.jpg" alt="Программирование" width="370">
@@ -171,7 +199,12 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-list__item">
-                        <img src="./images/demianenko.jpg" alt="Игорь Демьяненко" width="270">
+                        <picture>
+                            <source srcset="./images/demianenko.jpg 1x, ./images/demianenko2x-min.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/demianenko-min.jpg 1x, ./images/tablet/demianenko2x-min.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mobile/demianenko.jpg 1x, ./images/mobile/demianenko2x.jpg 2x" media="(min-width: 480px)">
+                            <img src="./images/demianenko.jpg" alt="Игорь Демьяненко" width="270">
+                        </picture>
                         <div class="caption">
                             <h3 class="team-list__title">Игорь Демьяненко</h3>
                             <p class="team-list__post" lang="en">Product Designer</p>
@@ -208,7 +241,13 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/repina.jpg" alt="Ольга Репина" width="270">
+                        <picture>
+                            <source srcset="./images/repina.jpg 1x, ./images/repina2x-min.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/repina-min.jpg 1x, ./images/tablet/repina2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/mobile/repina.jpg 1x, ./images/mobile/repina2x.jpg 2x" media="(min-width: 480px)">
+                            <img src="./images/repina.jpg" alt="Ольга Репина" width="270">
+                        </picture>
                         <div class="caption">
                             <h3 class="team-list__title">Ольга Репина</h3>
                             <p class="team-list__post" lang="en">Frontend Developer</p>
@@ -245,7 +284,12 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/tarasov.jpg" alt="Николай Тарасов" width="270">
+                        <picture>
+                            <source srcset="./images/tarasov.jpg 1x, ./images/tarasov2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/tarasov-min.jpg 1x, ./images/tablet/tarasov2x-min.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mobile/tarasov.jpg 1x, ./images/mobile/tarasov2x.jpg 2x" media="(min-width: 480px)">
+                            <img src="./images/tarasov.jpg" alt="Николай Тарасов" width="270">
+                        </picture>
                         <div class="caption">
                             <h3 class="team-list__title">Николай Тарасов</h3>
                             <p class="team-list__post" lang="en">Marketing</p>
@@ -282,7 +326,13 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/ermakov.jpg" alt="Михаил Ермаков" width="270">
+                        <picture>
+                            <source srcset="./images/ermakov.jpg 1x, ./images/ermakov2x.jpg  2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/ermakov-min.jpg 1x, ./images/tablet/ermakov2x-min.jpg  2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/mobile/ermakov.jpg 1x, ./images/mobile/ermakov2x.jpg 2x" media="(min-width: 480px)">
+                             <img src="./images/ermakov.jpg" alt="Михаил Ермаков" width="270">
+                        </picture>
                         <div class="caption">
                             <h3 class="team-list__title">Михаил Ермаков</h3>
                             <p class="team-list__post" lang="en">UI Designer</p>
@@ -424,7 +474,7 @@
                 <li class="subscribe">
                     <h3 class="join__title">Подпишитесь на рассылку</h3>
                     <form class="form-subscribe">
-                        <label>
+                        <label class="form-subscribe__label">
                         <input class="form-subscribe__input" type="email" name="email" placeholder="E-mail">
                         </label>
                         <button class="form-subscribe__button button--accent-color" type="submit">Подписаться
@@ -439,6 +489,7 @@
     </footer>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 
 </body>
 
