@@ -1195,7 +1195,14 @@ p {
   }
 }
 
+.project__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .project__caption {
+  flex-grow: 1;
   padding: 20px 24px;
   margin: 0;
   border-right: 1px solid var(--border-color-card);

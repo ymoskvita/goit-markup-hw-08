@@ -63,16 +63,20 @@
     }
   }
 
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__caption {
+    flex-grow: 1;
     padding: 20px 24px;
     margin: 0;
     border-right: 1px solid var(--border-color-card);
     border-bottom: 1px solid var(--border-color-card);
     border-left: 1px solid var(--border-color-card);
   }
-  // &__caption:nth-of-type(1n) {
-  //   padding-bottom: 56px;
-  // }
 
   &__title {
     margin: 0;
@@ -120,10 +124,4 @@
 
     color: var(--primary-white-color);
   }
-
-  // &__link {
-  //   display: flex;
-  //   flex-direction: column;
-  //   height: 100%;
-  // }
 }
