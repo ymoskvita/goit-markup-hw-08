@@ -1176,6 +1176,7 @@ p {
 
 .project__item {
   width: 100%;
+  margin-bottom: 30px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1212,9 +1213,9 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .project__item:not(:last-child) {
-    margin-bottom: 30px;
+@media screen and (max-width: 1199px) {
+  .project__item:last-child {
+    margin-bottom: 0;
   }
 }
 
